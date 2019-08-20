@@ -4,5 +4,6 @@
     <string name="btnPapel">Papel</string>
     <string name="btnTesoura">Tesoura</string>
     <string name="txtPlacar">Placar</string>
+    <string name="txtPlacarGeral">atualização do placa</string>
 
 </resources>

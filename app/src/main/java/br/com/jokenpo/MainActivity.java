@@ -2,6 +2,7 @@ package br.com.jokenpo;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private String jogadaPc;
     String[] jogadasPossiveis = {"pedra", "papel", "tesoura"};
     Random random = new Random();
+    private int placarPessoa=0,placarPc=0,rodadas=0;
 
 
     @Override
@@ -93,20 +95,34 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
         if (jogadaPessoa == "pedra" && jogadaPc == "papel") {
+            imagemUM.setBackgroundResource(R.drawable.pedra);
+            imagemDois.setBackgroundResource(R.drawable.papel);
+
 
             toast = Toast.makeText(getApplicationContext(), "Papel embrulha pedra!Robo Venceu!!!", duracao);
             toast.show();
+            placarPc++;
         } else if (jogadaPessoa == "papel" && jogadaPc == "pedra") {
+            imagemUM.setBackgroundResource(R.drawable.papel);
+            imagemDois.setBackgroundResource(R.drawable.pedra);
+
 
 
             toast = Toast.makeText(getApplicationContext(), "Papel embrulha pedra!Você Venceu!!!", duracao);
             toast.show();
+            placarPessoa++;
 
         } else if (jogadaPessoa == "pedra" && jogadaPc == "tesoura") {
+            imagemUM.setBackgroundResource(R.drawable.papel);
+            imagemDois.setBackgroundResource(R.drawable.pedra);
 
 
             toast = Toast.makeText(getApplicationContext(), "Pedra quebra tesoura!Você Venceu!!!", duracao);
             toast.show();
+            placarPessoa++;
+
+
+
         } else if (jogadaPessoa == "tesoura" && jogadaPc == "pedra") {
 
 
@@ -123,6 +139,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
             toast = Toast.makeText(getApplicationContext(), "Tesoura corta Papel!Voce Venceu!!!", duracao);
             toast.show();
+        }
+        else{
+
+            toast = Toast.makeText(getApplicationContext(), "Houve em empate" , duracao);
+            toast.show();
+
+            //TODO implemnetar os botoes de empate
+
         }
 
 

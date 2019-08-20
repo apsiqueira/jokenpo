@@ -4,81 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtPlacar"
-
         android:layout_width="355dp"
+
         android:layout_height="157dp"
-        android:layout_marginBottom="68dp"
         android:background="@drawable/placar2"
         android:text="@string/txtPlacar"
-        app:layout_constraintBottom_toTopOf="@+id/imagemDois"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.804"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="30dp" />
 
     <ImageView
         android:id="@+id/imagemDois"
-        android:layout_width="168dp"
-        android:layout_height="245dp"
-        android:layout_marginTop="248dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:background="@drawable/robo"
+        android:layout_width="167dp"
+        android:layout_height="236dp"
         android:contentDescription="TODO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="248dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/imagemUm"
-        android:layout_width="196dp"
-        android:layout_height="277dp"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/pessoa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPlacar"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_width="162dp"
+        android:layout_height="237dp"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="247dp"
+        tools:srcCompat="@tools:sample/avatars"
+
+        />"
 
     <Button
         android:id="@+id/btnPapel"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="147dp"
-        android:layout_marginRight="147dp"
+        android:layout_width="97dp"
+        android:layout_height="143dp"
         android:background="@drawable/papel"
         android:text="@string/btnPapel"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnPedra"
-        app:layout_constraintTop_toTopOf="@+id/btntesoura" />
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="589dp" />
 
     <Button
         android:id="@+id/btntesoura"
         android:layout_width="97dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:background="@drawable/tesoura"
         android:text="@string/btnTesoura"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        tools:layout_editor_absoluteX="298dp"
+        tools:layout_editor_absoluteY="589dp" />
 
     <Button
         android:id="@+id/btnPedra"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
+        android:layout_width="105dp"
+        android:layout_height="142dp"
         android:background="@drawable/pedra"
         android:text="@string/btnPedra"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnPapel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnPapel" />
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="590dp" />
+
+    <TextView
+        android:id="@+id/textViewPlacarGeral"
+        android:layout_width="225dp"
+
+        android:layout_height="59dp"
+        android:text="@string/txtPlacarGeral"
+
+        android:textAlignment="center"
+        android:textColor="#4CAF50"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="58dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
