@@ -43,6 +43,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         botaoPedra.setOnClickListener(this);
         botaoPapel.setOnClickListener(this);
         botaoTesoura.setOnClickListener(this);
+        imagemUM.setBackgroundResource(R.drawable.pessoa);
+        imagemDois.setBackgroundResource(R.drawable.robo);
 
 
     }
